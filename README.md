@@ -1,4 +1,9 @@
-# whisper.cpp
+# whisper.cppimport whisper
+
+model = whisper.load_model("base")  # ممكن تغيّر "base" إلى "small" لو جهازك ضعيف
+result = model.transcribe("Voice 061.m4a", language="ar")  # أو "en" لو التسجيل إنجليزي
+
+print(result["text"])
 
 ![whisper.cpp](https://user-images.githubusercontent.com/1991296/235238348-05d0f6a4-da44-4900-a1de-d0707e75b763.jpeg)
 
